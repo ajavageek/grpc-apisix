@@ -1,0 +1,20 @@
+syntax = "proto3";
+
+package ch.frankel.blog.grpc.model;
+
+option java_multiple_files = true;
+option java_package = "ch.frankel.blog.grpc.model";
+option java_outer_classname = "HelloProtos";
+
+service HelloService {
+    rpc SayHello (HelloRequest) returns (HelloResponse) {
+    }
+}
+
+message HelloRequest {
+    string name = 1;
+}
+
+message HelloResponse {
+    string message = 1;
+}
